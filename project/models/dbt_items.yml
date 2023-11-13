@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_item
+    description: Item Dimension. One row per item
+    columns:
+      - name: item_key
+        description: The surrogate key of the iten
+        tests:
+          - not_null
+          - unique
+      - name: item_id
+        description: The business / source key of the item
+        tests:
+          - not_null
+          - unique

@@ -12,9 +12,9 @@ sources:
             tests:
               - unique
 
-  - name: vbay
-    database: raw
-    schema: vbay
+  - name: VBAY
+    database: RAW
+    schema: VBAY
 
     tables:
       - name: VB_BIDS
