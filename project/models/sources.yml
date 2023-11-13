@@ -1,0 +1,49 @@
+version: 2
+
+sources:
+  - name: conformed
+    database: raw
+    schema: conformed
+
+    tables:
+      - name: DateDimension
+        columns:
+          - name: DateKey
+            tests:
+              - unique
+
+  - name: vbay
+    database: raw
+    schema: vbay
+
+    tables:
+      - name: VB_BIDS
+        columns:
+          - name: BID_ID
+            tests:
+              - unique
+    
+      - name: VB_ITEMS
+        columns:
+          - name: ITEM_ID
+            tests:
+              - unique
+      - name: VB_USERS
+        columns:
+          - name: USER_ID
+            tests:
+              - unique
+      
+      - name: VB_USER_RATINGS
+        columns:
+          - name: RATING_ID
+            tests:
+              - unique
+      - name: VB_ZIP_CODES
+        columns:
+          - name: ZIP_CODE
+            tests:
+              - unique
+
+               
+
