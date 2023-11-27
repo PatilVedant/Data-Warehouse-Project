@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: fact_items_popularity
+    description: Item level fact table. Transaction one row per item. Tracks Item popularity
+    columns:
+      - name: ITEM_ID
+        description: Degenerate dimension for of the ITEM.
+        tests:
+            - unique
+            - not_null
+      - name: ITEM_KEY
+        description: Dimension key for dim_item
+      - name: ITEM_SELLER_USER_KEY
+        description: role play dimension key for dim_user, seller_key
+      - name: ITEM_BUYER_USER_KEY
+        description: role play dimension key for dim_user, buyer_key
+
+      - name: ITEM_RESERVE
+        description: Minimum Amount set for an item
+
+      - name: ITEM_SOLD
+        description: Whether an item is sold or not. (TRUE OR FALSE)
+
+      - name: ITEM_SOLDAMOUNT
+        description: THE price at which the item was sold on.
+
+      - name: ITEM_BIDS_COUNT
+        description: Count of bids over am item. ****Semi-additive fact(double check)
+
+      - name: ITEM_SALES_SURPLUS
+        description: Differnce betweens reserve price and sold price. Positive means that the item was sold for than what the seller's minimum 
+      
+      - name: ITEM_FIRST_BID_DATE_KEY
+        description: Role play ITEM_FIRST_BID_DATE dimension key for dim_date. The date of first bid placed on the item.
+      
+      - name: ITEM_ENDDATE_KEY
+        description: Role play ENDDATE dimension key for dim_date. The date in which bidding ends for the item.
+      - name: ITEM_DURATION_IN_DAYS
+        description: The amount of time the item was on auction counted in days.
+
+      
+
