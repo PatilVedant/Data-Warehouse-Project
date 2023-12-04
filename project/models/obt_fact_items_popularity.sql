@@ -31,7 +31,7 @@ f_items_popularity.ITEM_SALES_SURPLUS,
 f_items_popularity.ITEM_DURATION_IN_DAYS,
 
 f_items_popularity.ITEM_SOLDAMOUNT, f_items_popularity.ITEM_ENDDATE_KEY,d2.*,
-f_items_popularity.ITEM_FIRST_BID_DATE_KEY,  d1.*,
+f_items_popularity.ITEM_FIRST_BID_DATE_KEY,  d1.*
 
 
 from f_items_popularity left join d_item on f_items_popularity.ITEM_KEY = d_item.ITEM_KEY
