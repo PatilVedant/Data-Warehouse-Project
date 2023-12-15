@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: fact_satisfaction
+    description: Review level fact table. Transaction one row per review. Tracks User Review
+    tests:
+        - dbt_utils.unique_combination_of_columns:
+            combination_of_columns:
+              - RATING_BY_USER_KEY
+              - RATING_FOR_USER_KEY
+    columns:
+      - name: RATING_BY_USER_KEY
+        description: role play Dimension key for dim_user
+
+      - name: RATING_FOR_USER_KEY
+        description: role play Dimension key for dim_user
+
+      - name: RATING_ASTYPE
+        description: Rating by Buyer or Seller
+
+      - name: RATING_OVERALL
+        description: Sum of all ratings given to a user
+
+      - name: RATING_COUNT
+        description: Count of distinct ratings given to a user
+
+      - name: ITEM_KEY
+        description: Dimension key for each item for that user level review
+
+      - name: ITEM_ID
+        description: Degenerate dimension for of the ITEM.
+
+
+
+      
+

@@ -4,5 +4,5 @@
     replace(to_date(VB_BIDS.BID_DATETIME)::varchar,'-','')::int as DATETIME_KEY,
     VB_BIDS.BID_AMOUNT,
     VB_BIDS.BID_STATUS,
-    case when  lower(VB_BIDS.BID_STATUS) = 'ok' then 'Y' else 'N' end as OK_BID
+    case when  lower(VB_BIDS.BID_STATUS) = 'ok' then 1 else 0 end as BID_OK
     from {{source('VBAY', 'VB_BIDS')}}
