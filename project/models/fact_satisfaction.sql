@@ -19,8 +19,8 @@ select
 {{dbt_utils.generate_surrogate_key(['stg_user_ratings.RATING_BY_USER_ID'])}} as RATING_BY_USER_KEY,
 {{dbt_utils.generate_surrogate_key(['stg_user_ratings.RATING_FOR_USER_ID'])}} as RATING_FOR_USER_KEY,
  RATING_ASTYPE,
- OVERALL_RATING,
- NO_OF_RATINGS,
+ OVERALL_RATING as RATING_OVERALL,
+ NO_OF_RATINGS as RATING_COUNT,
  {{dbt_utils.generate_surrogate_key(['stg_items.ITEM_ID'])}} as ITEM_KEY,
  stg_items.ITEM_ID
 from stg_user_ratings left join stg_items on (stg_user_ratings.rating_by_user_id = stg_items.item_seller_user_id and
