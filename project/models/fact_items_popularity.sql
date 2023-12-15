@@ -16,7 +16,7 @@ select stg_items.ITEM_ID,
  --stg_items.ITEM_SOLD,
  stg_items.ITEM_SOLDAMOUNT,
  case when  stg_items.ITEM_SOLD = TRUE then 1 else 0 end as ITEM_SOLD,
-replace(to_date(stg_items.ITEM_ENDDATE)::varchar,'-','')::int as ITEM_ENDDATE_KEY, /*Not sure how does this change date? lol*/
+replace(to_date(stg_items.ITEM_ENDDATE)::varchar,'-','')::int as ITEM_ENDDATE_KEY, 
 replace(to_date(stg_item_first_bid.ITEM_FIRST_BID_DATE)::varchar,'-','')::int as ITEM_FIRST_BID_DATE_KEY,
  stg_bids_count.ITEM_BIDS_COUNT,
  (stg_items.ITEM_SOLDAMOUNT - stg_items.ITEM_RESERVE) as ITEM_SALES_SURPLUS,
