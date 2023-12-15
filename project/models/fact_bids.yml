@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fact_bids
+    description: bid level fact table. Transaction one row per bid. Tracks bidding behaviour
+    columns:
+      - name: BID_ID
+        description: degenerate dimension for a bid
+        tests: 
+            - unique
+            - not_null
+      - name: USER_KEY
+        description: Dimension key for dim_user
+      - name: ITEM_KEY
+        description: Dimension key for dim_item      
+      - name: DATETIME_KEY
+        description: Dimension key for dim_date
+      - name: BID_AMOUNT
+        description: amount of bid given by user
+      - name: BID_STATUS
+        description: status of the bid. itemseller, ok or low
+      - name: BID_OK
+        description: Whether bid status is okay or not
