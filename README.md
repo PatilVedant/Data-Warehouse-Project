@@ -1,7 +1,6 @@
-IST 722 - DATA WAREHOUSE
+# DATA WAREHOUSE - VBAy Database
 
-Stack Overflow (Group 7)
-Overview
-Welcome to the Stack Overflow Dashboard repository! This project represents the collaborative efforts of Group 7 in creating a comprehensive analytics solution for Stack Overflow data. We've performed data profiling, executed ETL jobs on Snowflake, utilized dbt for modeling, and integrated everything into Power BI dashboards.
+##Overview
+I've conducted comprehensive data profiling, executed Extract, Transform, Load (ETL) processes specifically on the Snowflake platform, employed dbt for effective data modeling, and seamlessly integrated the processed data into Power BI dashboards for intuitive and insightful visualization. My repository showcases the end-to-end workflow, highlighting the tools and methodologies employed at each stage to ensure a robust and efficient data pipeline.
 
-Introduction
+##Introduction
